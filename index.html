@@ -5,13 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dada uma nota pelo usuario</title>
     <script>
+        function verificarNota()
+        {
+            var nota = parseFloat(document.getElementById("nota").value);
+       
+            if(nota>=0 && nota<=10)
+            {
+                document.getElementById("resultado").innerText = "Nota Válida";
+            }
+                else
+                {
+                     document.getElementById("resultado").innerText = "Nota inválida";
+                }
+        }
 
 
     </script>
 </head>
 <body>
     <input type="number" id="nota" placeholder="Digite a nota">
-    <button onclick=""></button>
+    <button onclick="verificarNota()">Verificar Nota</button>
+    <p id="resultado"></p>
     
 </body>
 </html>
